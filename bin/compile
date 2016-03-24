@@ -20,7 +20,8 @@ BUILDPACK_PATH=$compile_buildpack_dir source $compile_buildpack_dir/compile-exte
 
 # translated_url=$($compile_buildpack_dir/compile-extensions/bin/download_dependency nginx.tgz /tmp)
 # echo "Downloaded [$translated_url]"
-cp $compile_buildpack_dir/ngnix-bin/nginx-1.9.12-linux-x64.tgz /tmp/ngnix.tgz
+status "Copying local nginx"
+cp $compile_buildpack_dir/ngnix-bin/nginx-1.9.12-linux-x64.tgz /tmp/nginx.tgz
 compile_nginx_tgz="/tmp/nginx.tgz"
 cd $build_dir
 
